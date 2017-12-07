@@ -1,6 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { SnotifyModule, SnotifyService } from 'ng-snotify';
 
 import { AppComponent } from './app.component';
 
@@ -10,9 +10,12 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SnotifyModule
   ],
-  providers: [],
+  providers: [
+    SnotifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
